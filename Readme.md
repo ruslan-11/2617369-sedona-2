@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Ruslan Talipov](https://up.htmlacademy.ru/htmlcss-individual/2/user/2617369).
-* Наставник: `Неизвестно`.
+* Наставник: [Кенан Агаев](https://htmlacademy.ru/profile/kenakula).
 
 ---
 
