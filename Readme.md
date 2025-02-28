@@ -2,7 +2,7 @@
 
 * Студент: [Ruslan Talipov](https://up.htmlacademy.ru/htmlcss-individual/2/user/2617369).
 * Наставник: [Кенан Агаев](https://htmlacademy.ru/profile/kenakula).
-* Сайт [Мой проект Седона] (https://ruslan-11.github.io/2617369-sedona-2/)
+* Сайт : [Мой проект Седона] (https://ruslan-11.github.io/2617369-sedona-2/)
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
