@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+  
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    font-family: "PT Sans", Arial, sans-serif;
+
+    text-transform: uppercase;
+  
+    background-color: #f2f2f2;
+  }
+.page-header
+{
+    width: 1200;
+    height: 64;
+    justify-content: space-between;
+    padding-right: 70px;
+    padding-left: 70px;  
+}
+.hero-img
+{
+    background-image: url(images/welcome-divider.png),url(images/bg-welcome.jpg);
+    background-size: 100% auto, cover; 
+    background-position: bottom, center;
+    background-repeat: no-repeat, no-repeat;
+    background-color: rgb(255, 255, 255);
+    padding: 0; 
+    text-align: center; 
+    min-height: 485px;
+}
+
+.line
+{
+    width: 60px;
+    height: 2px;
+    background-color: #B0C4DE; 
+    margin: 0 auto 15px; /* Центрируем линию и добавляем отступ */
+}
+.advantages
+{
+    font-family: PT Sans;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+.navigation-list
+{
+    width: 507;
+    height: 64;
+    gap: 30px;
+}
+.navigation-link-search
+{
+    background-image: url("../images/icon-search.png");
+}
+.description
+{
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;  
+}
+.reason
+{
+    font-family: PT Sans;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    text-transform: none;
+}
+.advantages-item-item
+{
+    background-color: #7DAAC3; 
+    display: flex;
+    text-align: center;
+}
+.advantages-text
+{
+    font-family: PT Sans;
+    background-color: #7DAAC3; /* Голубой фон */
+    color: white; /* Белый текст */
+    text-align: center; /* Центрируем текст */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Центрируем по вертикали */
+    align-items: center;
+    width: 40%; /* 40% от ширины экрана */
+    padding: 50px;
+}
+.advantages-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px; /* Отступ после заголовка */
+}
+.advantages-description
+{
+    font-size: 18px;
+    line-height: 1.5;
+}
