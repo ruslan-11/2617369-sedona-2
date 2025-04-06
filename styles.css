@@ -1,73 +1,122 @@
-body {
+/* Общие стили */
+* {
     margin: 0;
     padding: 0;
-  
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 26px;
-    font-family: "PT Sans", Arial, sans-serif;
+    box-sizing: border-box;
+}
 
-    text-transform: uppercase;
-  
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: center;
+    color: #333333;
     background-color: #f2f2f2;
-  }
-.page-header
-{
+}
+
+/* Навигация */
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.navigation-left {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: 70px;
+}
+
+.navigation-right {
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: 70px;
+    width: 291px;
+    align-items: center;
+}
+
+/* Ссылки навигации */
+.navigation-link {
+    display: block;
+    height: 66px;
+    padding: 20px 17px;
+    box-sizing: border-box;
+    color: inherit;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 26px;
+    position: relative;
+}
+
+
+/* Правые ссылки навигации */
+.navigation-right .navigation-link {
+    width: 42px;
+    height: 64px;
+    padding: 12px 20px;
+}
+
+/* Ссылки с иконками */
+.navigation-link-search {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(255, 255, 255);
+    background-image: url("images/icon-search.svg");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: center;
+    cursor: pointer;
+}
+
+.navigation-link-like {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(255, 255, 255);
+    background-image: url("images/icon-fav.svg");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: center;
+    cursor: pointer;
+}
+
+/* Заголовок */
+.page-header {
     width: 1200;
     height: 64;
     justify-content: space-between;
     padding-right: 70px;
-    padding-left: 70px;  
+    padding-left: 70px;
 }
-.hero-img
-{
-    background-image: url(images/welcome-divider.png),url(images/bg-welcome.jpg);
-    background-size: 100% auto, cover; 
+
+/* Блок с изображением */
+.hero-img {
+    background-image: url("images/welcome-divider.png"),url("images/bg-welcome.jpg");
+    background-size: 100% auto, cover;
     background-position: bottom, center;
     background-repeat: no-repeat, no-repeat;
     background-color: rgb(255, 255, 255);
-    padding: 0; 
-    text-align: center; 
+    padding: 0;
+    text-align: center;
     min-height: 485px;
 }
 
-.line
-{
-    width: 60px;
-    height: 2px;
-    background-color: #B0C4DE; 
-    margin: 0 auto 15px; /* Центрируем линию и добавляем отступ */
-}
-.advantages
-{
-    font-family: PT Sans;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 26px;
-    letter-spacing: 0%;
-    text-align: center;
-}
-.navigation-list
-{
-    width: 507;
-    height: 64;
-    gap: 30px;
-}
-.navigation-link-search
-{
-    background-image: url("../images/icon-search.png");
-}
-.description
-{
+/* Текстовые блоки */
+.description {
     font-family: "PT Sans", "Arial", sans-serif;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
     text-align: center;
-    text-transform: uppercase;  
+    text-transform: uppercase;
 }
-.reason
-{
+
+.reason {
     font-family: PT Sans;
     font-weight: 400;
     font-size: 22px;
@@ -75,32 +124,435 @@ body {
     text-align: center;
     text-transform: none;
 }
+/* Общие стили для секции */
+.advantages
+{
+    padding-top: 40px;
+    background-color: #ffffff;
+    font-family: "PT Sans", sans-serif;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    color: #000;
+}
+  
+  /* Заголовки и описания */
+.description,
+.reason 
+{
+    margin: 0 auto 20px;
+    max-width: 800px;
+} 
+  /* Общий список */
+.advantages-list
+{
+    list-style: none;
+    padding: 0;
+}
+  
+  /* ========================= */
+  /* Блок с изображением + текст */
 .advantages-item-item
 {
-    background-color: #7DAAC3; 
     display: flex;
-    text-align: center;
+    width: 100%;
+    height: 385px;
+    background-color: #82b3d3;
+    color: #ffffff;
+    box-sizing: border-box;
 }
-.advantages-text
+h3
 {
     font-family: PT Sans;
-    background-color: #7DAAC3; /* Голубой фон */
-    color: white; /* Белый текст */
-    text-align: center; /* Центрируем текст */
+    font-weight: 700px;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+  
+.advantages-item-item.reverse 
+{
+    flex-direction: row-reverse;
+}
+  
+.advantages-text
+{
+    width: 33.33%;
+    padding: 85px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: #82b3d3;
+}
+.services-list-souvenir-description,
+.services-list-homе-description,
+.services-list-food-description
+{
+    font-family: PT Sans;
+    font-weight: 400px;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+.town
+{
+    width: 66.66%;
+    height: 385px;
+}
+  
+.town img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.advantages-wrapper
+{
+    display: flex;
+    justify-content: center;
+    /*gap: 10px;*/
+    flex-wrap: wrap;  
+    width: 100%; 
+}
+.services-list-homе,
+.services-list-souvenir
+{
+    width: 33.33%;
+    gap: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color:#83B3D31F; /* Цвет боков */
     display: flex;
     flex-direction: column;
     justify-content: center; /* Центрируем по вертикали */
-    align-items: center;
-    width: 40%; /* 40% от ширины экрана */
-    padding: 50px;
+    align-items: center; /* Центрируем по горизонтали */
+    padding-top: 80px;
+    padding-right: 85px;
+    padding-bottom: 80px;
+    padding-left: 85px;
+
 }
-.advantages-title {
+.services-list-food
+{
+    width: 33.33%;
+    height: 385px;
+    gap: 10px;
+    text-align: center;
+    background-color:#f5faff; /* Цвет боков */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Центрируем по вертикали */
+    align-items: center; /* Центрируем по горизонтали */ 
+    padding-top: 80px;
+    padding-right: 85px;
+    padding-bottom: 80px;
+    padding-left: 85px;
+
+}
+.icon-home
+{
+    background-image: url("images/bg-house.svg");
+    width: 74px;
+    height: 70px;
+}
+.icon-food
+{
+    background-image: url("images/bg-food.svg");
+    width: 74px;
+    height: 70px;
+}
+.icon-souvenir
+{
+    background-image: url("images/bg-giftbox.svg");
+    width: 64px;
+    height: 76px;
+}
+.sedona-hottels
+{
+    width: 100%;
+    height: 406px;
+    padding-top: 96px;
+    padding-right: 304px;
+    padding-left: 304px;
+    gap: 10px;
+    background-color: #ffffff; /* Белый фон */
+}
+.sedona-hottels-size-title
+{
+    margin-bottom: 20px; /* Можно менять значение на больше или меньше */
+}
+.search-sedona-hottels-button
+{
+    background-image: url("images/button-Search-hotels.png");
+    display: inline-block;
+    width: 276px;
+    height: 36px;
+    background-size: cover;
+    margin-top: 20px;
+    background-position: center center; /* Центрируем изображение */
+}
+.sedona-hottels-text
+{
+    width: 592px;
+    height: 52px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    box-sizing: border-box;   /* Учитываем паддинги */
+}
+.sedona-hottels-description
+{
+    margin: 0;
+    padding: 0; /* Убираем паддинги */
+    text-align: center; /* Центрируем текст */
+    font-family: PT Sans;
+    font-weight: 400px;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+.sedona-hottels-size
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Центрируем по вертикали */
+    align-items: center;     /* Центрируем по горизонтали */
+    height: 214px; 
+}
+.sedona-hottels-description
+{
+    text-align: center;
+}
+.advantage-block
+{
+    width: 33.33%;
+    height: 385px;
+    left: 400px;
+    padding-top: 103px;
+    padding-right: 85px;
+    padding-bottom: 103px;
+    padding-left: 85px;
+    gap: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color:#f5faff; /* Цвет боков */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Центрируем по вертикали */
+    align-items: center; /* Центрируем по горизонтали */
+}
+.advantage-block-midl
+{
+    width: 33.33%;
+    background-color:#83B3D333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.advantage-block-midl .advantage-block {
+  background-color: transparent; /* Убираем фон у вложенного блока */
+  width: 100%;
+}
+  /* Финальный блок-призыв */
+.advantages-item
+{
+    background-color: #FFFFFF;
+    text-align: center;
+    padding-top:64px;
+    padding-bottom: 64px;
+    gap: 20px;
+    padding: auto;
+    width: 100%;
+    height: 200px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+  /* Общие элементы */
+.advantages-title
+{
+    font-family: PT Sans;
+    font-weight: 700px;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+  
+.advantages-description-one
+{
+    font-family: PT Sans;
+    font-weight: 400px;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    margin-top: 10px;
+}
+.advantages-description-two
+{
+    font-family: PT Sans;
+    font-weight: 400px;
+    font-size: 22px;
+    line-height: 2px;
+    text-align: center;
+    margin-top: 10px;
+}
+.line 
+{
+    width: 60px;
+    height: 2px;
+    background-color: #b0c4de;
+    margin: 0 auto 15px;
+}
+
+/* Скрытие элементов */
+
+.visually-hidden
+{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/* Кнопка */
+.button-like {
+    background-image: url("images/button-wannago.png");
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #756157;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.page-footer
+{
+    background-image: url("images/index-background.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 40px 20px;
+    color: #fff; /* Белый цвет текста для контраста с фоном */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    min-height: 200px;
+
+}
+.subscribe {
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+.discription {
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 15px; /* Отступ после заголовка */
+    margin-bottom: 10px;
 }
-.advantages-description
+
+.reasons {
+    font-size: 16px;
+    margin-bottom: 20px;
+    opacity: 0.8; /* Лёгкая прозрачность для текста */
+}
+
+/* Стили для формы подписки */
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+}
+
+.field {
+    padding: 10px;
+    width: 250px;
+    border: none;
+    border-radius: 5px 0 0 5px;/* Скругление только слева */
+    font-size: 16px;
+    outline: none;
+}
+
+.button-subscribe {
+    padding: 10px 20px;
+    background-color: #4a90e2; /* Голубой цвет кнопки */
+    color: #fff;
+    border: none;
+    border-radius:  0 5px 5px 0;/* Скругление только слева */
+    font-size: 16px;
+    cursor: pointer;
+}
+/* Стили для секции контактов */
+.contacts 
 {
-    font-size: 18px;
-    line-height: 1.5;
+    position: absolute;
+    bottom: 20px;      /* расстояние от нижнего края футера */
+    left: 20px;        /* расстояние от левого края футера */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
+.contacts-location
+{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+/* Стили для ссылок на социальные сети */
+.contacts-vk,
+.contacts-telegram,
+.contacts-youtube {
+    display: inline-block;
+    width: 24px; /* Размер иконки */
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-indent: -9999px; /* Скрываем текст, так как это декоративные изображения */
+}
+
+.contacts-vk {
+    background-image: url("images/icon-fav.png"); /* Замените на путь к иконке ВКонтакте */
+}
+
+.contacts-telegram {
+    background-image: url("images/icon-fav.png"); /* Замените на путь к иконке Telegram */
+}
+
+.contacts-youtube {
+    background-image: url("images/icon-fav.png"); /* Замените на путь к иконке YouTube */
+}
+
+/* Стили для номера телефона */
+.contacts-phone {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
